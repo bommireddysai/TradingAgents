@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/overlay_bg"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:id="@+id/dragHandle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⠿ Quick Toggles"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:text="✕"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/swDns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Private DNS"
+        android:textColor="#FFFFFF" />
+
+    <Switch
+        android:id="@+id/swDebug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USB debugging"
+        android:textColor="#FFFFFF" />
+
+    <Switch
+        android:id="@+id/swWifiAdb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wi-Fi ADB"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
