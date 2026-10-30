@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="lan_share"
-        android:enabled="true"
-        android:icon="@drawable/ic_tile"
-        android:shortcutShortLabel="@string/sc_lan_share">
-        <intent
-            android:action="com.example.quicktoggles.LAN_SHARE"
-            android:targetClass="com.example.quicktoggles.ShortcutActivity"
-            android:targetPackage="com.example.quicktoggles" />
-    </shortcut>
-    <shortcut
         android:shortcutId="dns"
         android:enabled="true"
         android:icon="@drawable/ic_tile"

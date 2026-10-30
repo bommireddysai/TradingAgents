@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Quick Toggles</string>
-    <string name="sc_lan_share">LAN share</string>
     <string name="sc_dns">DNS on/off</string>
     <string name="sc_dev_options">Developer options</string>
     <string name="sc_wifi_debug">Wi-Fi debugging</string>

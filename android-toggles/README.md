@@ -26,9 +26,8 @@ The same three toggles are also available as tiles. Swipe down twice, tap the pe
 
 ## Shortcuts
 
-Long-press the app icon for four shortcuts, or tap **Add shortcuts to home screen** in the app to pin them:
+Long-press the app icon for three shortcuts, or tap **Add shortcuts to home screen** in the app to pin them:
 
-- **LAN share** – opens the hotspot/tethering screen (Android doesn't let apps flip tethering themselves)
 - **DNS on/off** – toggles Private DNS
 - **Developer options** – opens Developer options
 - **Wi-Fi debugging** – toggles wireless debugging
@@ -36,3 +35,16 @@ Long-press the app icon for four shortcuts, or tap **Add shortcuts to home scree
 ## Using it on two phones
 
 Install the same APK on each phone and run the `adb shell pm grant` command once per phone. The DNS hostname is saved separately on each.
+
+## Installing over Wi-Fi debugging
+
+On each phone: Settings > Developer options > Wireless debugging > on, then **Pair device with pairing code**. From the computer (same Wi-Fi):
+
+```
+adb pair <phone-ip>:<pairing-port>          # enter the 6-digit code
+adb connect <phone-ip>:<debug-port>
+adb -s <phone-ip>:<debug-port> install -r app/build/outputs/apk/debug/app-debug.apk
+adb -s <phone-ip>:<debug-port> shell pm grant com.example.quicktoggles android.permission.WRITE_SECURE_SETTINGS
+```
+
+Repeat for the second phone. Build the APK first with `./gradlew assembleDebug` (or Build > Build APK in Android Studio).
