@@ -23,3 +23,16 @@ Drag the panel by its title; ✕ hides it.
 The same three toggles are also available as tiles. Swipe down twice, tap the pencil/edit icon, and drag
 **Private DNS**, **USB debugging** and **Wi-Fi ADB** into your tiles. They show as unavailable until the
 `adb shell pm grant` step above is done. Tiles use the DNS hostname saved in the app.
+
+## Shortcuts
+
+Long-press the app icon for four shortcuts, or tap **Add shortcuts to home screen** in the app to pin them:
+
+- **LAN share** – opens the hotspot/tethering screen (Android doesn't let apps flip tethering themselves)
+- **DNS on/off** – toggles Private DNS
+- **Developer options** – opens Developer options
+- **Wi-Fi debugging** – toggles wireless debugging
+
+## Using it on two phones
+
+Install the same APK on each phone and run the `adb shell pm grant` command once per phone. The DNS hostname is saved separately on each.
