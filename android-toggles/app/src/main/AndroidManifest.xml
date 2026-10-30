@@ -32,5 +32,38 @@
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="Floating on-screen toggles for DNS, USB debugging and Wi-Fi ADB" />
         </service>
+
+        <service
+            android:name=".DnsTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_tile"
+            android:label="Private DNS"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".DebugTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_tile"
+            android:label="USB debugging"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".WifiAdbTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_tile"
+            android:label="Wi-Fi ADB"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
     </application>
 </manifest>

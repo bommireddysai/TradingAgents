@@ -17,3 +17,9 @@ A floating, draggable on-screen panel (Android 8+; Wi-Fi ADB needs Android 11+) 
 3. Open the app, tap **Allow display over other apps**, then **Show on-screen toggles**.
 
 Drag the panel by its title; ✕ hides it.
+
+## Quick Settings tiles
+
+The same three toggles are also available as tiles. Swipe down twice, tap the pencil/edit icon, and drag
+**Private DNS**, **USB debugging** and **Wi-Fi ADB** into your tiles. They show as unavailable until the
+`adb shell pm grant` step above is done. Tiles use the DNS hostname saved in the app.
