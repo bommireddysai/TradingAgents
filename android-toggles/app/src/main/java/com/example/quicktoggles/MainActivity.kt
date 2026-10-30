@@ -8,6 +8,7 @@ import android.provider.Settings
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : Activity() {
 
@@ -32,6 +33,11 @@ class MainActivity : Activity() {
             toggles.dnsHostname = dnsHost.text.toString().ifBlank { SecureToggles.DEFAULT_DNS_HOST }
             if (Settings.canDrawOverlays(this)) {
                 startForegroundService(Intent(this, OverlayService::class.java))
+            }
+        }
+        findViewById<Button>(R.id.btnPin).setOnClickListener {
+            if (!PinShortcuts.requestAll(this)) {
+                Toast.makeText(this, "Launcher can't pin shortcuts; long-press the app icon instead", Toast.LENGTH_LONG).show()
             }
         }
         findViewById<Button>(R.id.btnStop).setOnClickListener {

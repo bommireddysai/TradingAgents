@@ -32,6 +32,12 @@
         android:text="2. Show on-screen toggles" />
 
     <Button
+        android:id="@+id/btnPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Add shortcuts to home screen" />
+
+    <Button
         android:id="@+id/btnStop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
